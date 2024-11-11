@@ -9,3 +9,8 @@
       name: httpd
       state: latest
   
+  tasks:
+  - name: removing now 
+ ansible.builtin.yum:
+     name:httpd
+     state:removed
