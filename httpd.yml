@@ -1,16 +1,15 @@
 ---
-- name: Update web servers
+- name: Manage Apache on web servers
   hosts: webservers
   remote_user: root
 
   tasks:
-  - name: Ensure apache is at the latest version
-    ansible.builtin.yum:
-      name: httpd
-      state: latest
+    - name: Ensure Apache is at the latest version
+      ansible.builtin.yum:
+        name: httpd
+        state: latest
   
-  tasks:
-  - name: removing now 
-    ansible.builtin.yum:
-     name:httpd
-     state:absent
+    - name: Remove Apache if necessary
+      ansible.builtin.yum:
+        name: httpd
+        state: absent
