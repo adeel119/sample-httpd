@@ -1,6 +1,6 @@
 ---
 - name: Manage Apache on web servers
-  hosts: webservers
+  hosts: all
   remote_user: root
 
   tasks:
