@@ -11,6 +11,6 @@
   
   tasks:
   - name: removing now 
- ansible.builtin.yum:
+    ansible.builtin.yum:
      name:httpd
-     state:removed
+     state:absent
