@@ -9,6 +9,6 @@
         name: httpd
         state: latest
         state: enabled
-        immediate: yes
+        got: enabled
   
     
