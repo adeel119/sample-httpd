@@ -1,9 +1,10 @@
 ---
-- name: Manage Apache on web servers
+- name: Install and enable Apache on web servers
   hosts: all
-  become: yes  # This ensures tasks run with elevated privileges
+  become: yes  # Ensures tasks run with elevated privileges
+
   tasks:
-    - name: Ensure Apache is at the latest version
+    - name: Ensure Apache is installed at the latest version
       ansible.builtin.yum:
         name: httpd
         state: latest
