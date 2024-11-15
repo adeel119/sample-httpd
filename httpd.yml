@@ -7,6 +7,6 @@
     - name: Ensure Apache is at the latest version
       ansible.builtin.yum:
         name: httpd 
-        state: present 
+        state: started 
         enabled: yes
     
