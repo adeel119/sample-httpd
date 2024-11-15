@@ -1,8 +1,7 @@
 ---
 - name: Manage Apache on web servers
   hosts: all
-  remote_user: root
-
+  become: yes  # This ensures tasks run with elevated privileges
   tasks:
     - name: Ensure Apache is at the latest version
       ansible.builtin.yum:
