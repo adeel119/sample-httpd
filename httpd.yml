@@ -3,10 +3,11 @@
   hosts: all
   remote_user: root
 
-  tasks:
-    - name: Ensure Apache is at the latest version
-      ansible.builtin.yum:
-        name: httpd 
-        state: started 
+ - name: Ensure Apache is started and enabled
+  ansible.builtin.systemd:
+    name: httpd
+    state: started
+    enabled: yes
+
         
     
